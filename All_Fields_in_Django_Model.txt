@@ -1,0 +1,58 @@
+Field Types in Django Models
+
+* Text and String Fields
+Field		Description
+CharField	Short text field (must specify max_length)
+TextField	Large text field (no max_length needed)
+SlugField	Short label for URLs (letters, numbers, hyphens)
+EmailField	Validates email format
+URLField	Validates URL format
+UUIDField	Stores universally unique identifiers
+
+* Numeric Fields
+Field				Description
+IntegerField			Whole numbers (positive or negative)
+BigIntegerField			Very large integers
+PositiveIntegerField		Positive integers only
+PositiveSmallIntegerField	Small positive integers
+SmallIntegerField		Small integers (less storage)
+FloatField			Floating point numbers (decimals)
+DecimalField			Exact decimal numbers (e.g., money); requires max_digits and decimal_places
+
+* Boolean and Null Fields
+Field			Description
+BooleanField		True/False value
+NullBooleanField	True, False, or NULL (Deprecated, use BooleanField(null=True))
+
+* Date and Time Fields
+Field		Description
+DateField	Stores date (year, month, day)
+TimeField	Stores time (hour, minute, second)
+DateTimeField	Stores date and time
+DurationField	Stores time durations (like timedelta)
+AutoField	Auto-incrementing primary key (used by default)
+BigAutoField	Big version of AutoField (for large IDs)
+
+
+* File and Media Fields
+Field		Description
+FileField	Upload and store files
+ImageField	Inherits from FileField, validates images
+
+
+* Relational Fields (Relationships)
+Field			Description
+ForeignKey		One-to-many relationship (e.g., each student → one course)
+OneToOneField		One-to-one relationship (e.g., one user → one profile)
+ManyToManyField		Many-to-many relationship (e.g., authors ↔ books)
+
+
+
+* Miscellaneous Fields
+Field				Description
+GenericIPAddressField		Validates IPv4/IPv6 addresses
+JSONField			Stores structured data in JSON format
+BinaryField			Stores raw binary data (e.g., images, files)
+CommaSeparatedIntegerField	Deprecated — use CharField with custom validation
+Choices				Option to limit values (works with most fields)
+
