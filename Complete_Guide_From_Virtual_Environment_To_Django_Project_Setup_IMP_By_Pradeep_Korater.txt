@@ -1,0 +1,121 @@
+1.Working with Virtual environment:
+
+
+  1.1. pip install virtualenv (In command prompt enter this command to Install the Virtual environment Package)
+
+  1.2. Creating the Project Directory/Folder    (Name them as Project1, Project2 etc..)
+
+  1.3. python -m venv myenv  (In the Project Directory you Created open Command Prompt Use this command to Create the Virtual environment named myenv) 
+
+  1.4. myenv\Scripts\activate
+
+  1.5. install  Packages    
+     pip install <package-name>   
+    
+     example: pip install Django
+
+
+(Continue with (Step 2.1) of "2.Guide to setting up Django Project" which is given below to Create Django Project and Django Applications)
+
+
+
+
+
+  * pip freeze > requirements.txt
+
+   #Creates a text file named requirements.txt which contains the list of all the packages required to run the particular project, along with their versions
+
+  *  python install -r requirements.txt
+
+    #the above command installs the packages mentioned inside the requirements.txt all at once 
+
+    # Use this when you are working with a different device, Usually when transferring the entire project files with your teammates(we can avoid myenv folder since its not suitable to share it in all platforms as the size will be larger)  
+
+
+  
+  * use deactivate  command to deactivate the particular virtual environment
+
+
+
+
+2.Guide to setting up a Django project:
+
+  2.1. Install Django
+      
+      Make sure Python is installed. Then open your terminal and run:
+
+      pip install Django
+
+
+  2.2. Create a Django Project
+       
+       django-admin startproject project_name
+
+       or 
+
+       python -m django startproject project_name
+
+
+       Example:
+       django-admin startproject Student_Management
+
+       or
+
+       python -m django startproject Student_Management
+
+   
+      This creates a folder named Student_Management/ with necessary files.
+
+
+
+   
+   2.3. Navigate into the Project Folder
+
+        cd Student_Project
+
+
+   2.4. Run the Development Server
+    
+        python manage.py runserver
+
+
+     Open your browser and go to:
+     http://127.0.0.1:8000
+     You’ll see the Django welcome page.
+
+
+	
+
+   2.5. Create a Django App
+    Inside your project folder:
+
+   python manage.py startapp app_name
+
+   Example:
+
+   python manage.py startapp student_app
+
+   This creates a new app folder named student_app/.
+
+ 
+   2.6. Add App to Settings
+   
+    Open Student_Management/settings.py and add your app in INSTALLED_APPS:
+
+
+   INSTALLED_APPS = [
+      ...
+      'student_app',
+    ]
+
+
+   2.7. Create Database Tables
+   Run the initial migrations:
+
+   i)  python manage.py makemigrations
+   ii) python manage.py migrate
+
+   
+   2.8. Start Building Views and URLs
+
+   Define views in student_app/views.py, and map them in student_app/urls.py (create this file if it doesn’t exist), then include it in the project’s urls.py.
