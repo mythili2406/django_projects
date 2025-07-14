@@ -1,0 +1,57 @@
+Microsoft Windows [Version 10.0.26100.4652]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\pc\OneDrive\Documents\ict academy\Django_Projects\project2>python -m venv myenv
+
+C:\Users\pc\OneDrive\Documents\ict academy\Django_Projects\project2>myenv\scripts\activate
+
+(myenv) C:\Users\pc\OneDrive\Documents\ict academy\Django_Projects\project2>django-admin --version
+'django-admin' is not recognized as an internal or external command,
+operable program or batch file.
+
+(myenv) C:\Users\pc\OneDrive\Documents\ict academy\Django_Projects\project2>pip install django
+Collecting django
+  Using cached django-5.2.4-py3-none-any.whl.metadata (4.1 kB)
+Collecting asgiref>=3.8.1 (from django)
+  Using cached asgiref-3.9.1-py3-none-any.whl.metadata (9.3 kB)
+Collecting sqlparse>=0.3.1 (from django)
+  Using cached sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+Collecting tzdata (from django)
+  Using cached tzdata-2025.2-py2.py3-none-any.whl.metadata (1.4 kB)
+Using cached django-5.2.4-py3-none-any.whl (8.3 MB)
+Using cached asgiref-3.9.1-py3-none-any.whl (23 kB)
+Using cached sqlparse-0.5.3-py3-none-any.whl (44 kB)
+Using cached tzdata-2025.2-py2.py3-none-any.whl (347 kB)
+Installing collected packages: tzdata, sqlparse, asgiref, django
+Successfully installed asgiref-3.9.1 django-5.2.4 sqlparse-0.5.3 tzdata-2025.2
+
+[notice] A new release of pip is available: 24.3.1 -> 25.1.1
+[notice] To update, run: python.exe -m pip install --upgrade pip
+
+(myenv) C:\Users\pc\OneDrive\Documents\ict academy\Django_Projects\project2>django-admin startproject Book
+
+(myenv) C:\Users\pc\OneDrive\Documents\ict academy\Django_Projects\project2>cd Book
+
+(myenv) C:\Users\pc\OneDrive\Documents\ict academy\Django_Projects\project2\Book>python manage.py startapp bookapp
+
+ -- go to the file in vs code and under setting.py add "book" inside installed apps
+
+(myenv) C:\Users\pc\OneDrive\Documents\ict academy\Django_Projects\project2\Book>python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+July 11, 2025 - 14:36:10
+Django version 5.2.4, using settings 'Book.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/5.2/howto/deployment/
+[11/Jul/2025 14:36:46] "GET / HTTP/1.1" 200 12068
+Not Found: /favicon.ico
+[11/Jul/2025 14:36:46] "GET /favicon.ico HTTP/1.1" 404 2206
+
