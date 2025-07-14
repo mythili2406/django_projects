@@ -1,0 +1,6 @@
+open your project folder
+choose "ctrl +shift+p" on your keyboard
+type "python:select interpreter"
+select "enter interpreter path "
+choose "find" option
+navigate to ur project file folder >virtual envirnments folder(myenv)>python >select interpreter
